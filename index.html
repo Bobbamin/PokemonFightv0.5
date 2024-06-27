@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>COMBAT</title>
+</head>
+
+<body class="flex items-center justify-center min-h-screen">
+    <div class="text-center bg-white p-10 rounded-lg shadow-lg">
+        <h1 class="text-4xl font-bold text-gray-800 mb-6">LEAGUE POKEMON DE KALOS!!</h1>
+        <button id="start-button" class="bg-red-500 hover:bg-red-700 text-white px-6 py-3 rounded-full font-semibold mb-4 transition duration-300">Commencer la partie</button>
+        <div id="game-area" class="hidden">
+            <div class="flex justify-around mb-4">
+                <div id="pokemon1" class="text-gray-800">
+                    <p id="pokemon1-name" class="text-xl font-bold mb-2"></p>
+                    <img id="pokemon1-img" class="w-32 h-32 mx-auto mb-2" src="" alt="Pokemon 1">
+                    <p id="pokemon1-hp" class="text-xl font-bold">100 PV</p>
+                    <button id="attack-button1" class="bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-full font-semibold transition duration-300 hidden">Attaque</button>
+                </div>
+                <div id="pokemon2" class="text-gray-800">
+                    <p id="pokemon2-name" class="text-xl font-bold mb-2"></p>
+                    <img id="pokemon2-img" class="w-32 h-32 mx-auto mb-2" src="" alt="Pokemon 2">
+                    <p id="pokemon2-hp" class="text-xl font-bold">100 PV</p>
+                    <button id="attack-button2" class="bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-full font-semibold transition duration-300 hidden">Attaque</button>
+                </div>
+            </div>
+        </div>
+        <p id="damage-message" class="text-gray-700 text-xl mt-6 font-bold hidden"></p>
+        <p id="winner-message" class="text-red-500 text-2xl mt-6 font-bold"></p>
+        <button id="restart-button" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full font-semibold mt-4 transition duration-300 hidden">Relancer</button>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="useApi.js"></script>
+    <script src="api.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
